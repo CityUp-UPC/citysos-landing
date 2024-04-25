@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="CitySOS">
+	<nav class="bg-white flex justify-around items-center p-4 drop-shadow-lg">
+		<a href="#">
+			<div class="flex gap-2 items-center hover:scale-95 duration-200">
+				<img class="h-6 md:h-8  sm:h-4" src="/src/assets/sos-icon.webp" alt="CitySOS Logo"/>
+				<h1 class="text-2xl font-bold text-primary">CitySOS</h1>
+			</div>
+		</a>
+		<ul class="hidden md:flex items-center gap-8 text-lg">
+			<li><a href="#features-section" id="features-nav-link" class="hover:text-secondary hover:cursor-pointer">Características</a></li>
+			<li><a href="#customers-section" id="customers-nav-link" class="hover:text-secondary hover:cursor-pointer">Ciudadano</a></li>
+			<li><a href="#about-section" id="about-nav-link" class="hover:text-secondary hover:cursor-pointer">Policía</a></li>
+			<li><a href="#about-section" id="about-nav-link" class="hover:text-secondary hover:cursor-pointer">Descarga</a></li>
+		</ul>
+		<div>
+			<button href="#" target="_blank"
+					class="flex gap-2 px-4 py-2 outline outline-2 outline-primary rounded-full">
+				<p class="font-medium text-primary">Descarga</p>
+				<svg
+					width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8 22.0002H16C18.8284 22.0002 20.2426 22.0002 21.1213 21.1215C22 20.2429 22 18.8286 22 16.0002V15.0002C22 12.1718 22 10.7576 21.1213 9.8789C20.3529 9.11051 19.175 9.01406 17 9.00195M7 9.00195C4.82497 9.01406 3.64706 9.11051 2.87868 9.87889C2 10.7576 2 12.1718 2 15.0002L2 16.0002C2 18.8286 2 20.2429 2.87868 21.1215C3.17848 21.4213 3.54062 21.6188 4 21.749" stroke="#B30000" stroke-width="1.5" stroke-linecap="round"></path> <path d="M12 2L12 15M12 15L9 11.5M12 15L15 11.5" stroke="#B30000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+			</button>
+		</div>
+		<div class="md:hidden flex items-center">
+			<a href="https://medmeet-app.netlify.app" target="_blank">
+				<button class="btn btn-primary-fill">Open App</button>
+			</a>
+			<ion-icon
+				class="text-24 hover:cursor-pointer hover:scale-95 duration-200"
+				id="menuIcon"
+				onclick="onToggleMenu(this)"
+				name="menu">
+			</ion-icon>
+		</div>
+	</nav>
+	<div class="responsive-navbar hidden">
+		<div class="md:hidden justify-center items-center text-center">
+			<ul class="uppercase w-full">
+				<a href="#features-section" id="features-nav-link" onclick="closeToggleMenu(this)">
+					<li class="py-4 my-4 hover:box-element-fill">Features</li>
+				</a>
+				<a href="#customers-section" id="customers-nav-link" onclick="closeToggleMenu(this)">
+					<li class="py-4 my-4 hover:box-element-fill">Customers</li>
+				</a>
+				<a href="#about-section" id="about-nav-link" onclick="closeToggleMenu(this)">
+					<li class="py-4 my-4 hover:box-element-fill">About</li>
+				</a>
+				<a href="https://medmeet-app.netlify.app" target="_blank" onclick="closeToggleMenu(this)">
+					<li class="py-4 my-4 text-primary font-bold hover:box-element-fill">Open App</li>
+				</a>
+				<li class="py-4 my-4">
+					<div class="language-switcher">
+						<select id="language-select">
+							<option value="en">
+								<img src="assets/united-kingdom-uk-svgrepo-com.svg">
+								English
+							</option>
+							<option value="es">
+								<img src="assets/flag-for-flag-spain-svgrepo-com.svg">
+								Español
+							</option>
+						</select>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<main class="container mx-auto">
+		<!-- Navbar -->
+		<section class="grid grid-cols-1 md:grid-cols-2 py-12">
+			<div class="flex flex-col justify-center items-center p-12">
+				<div class="text-center md:text-left">
+					<h1 class="md:text-left text-5xl font-bold text-primary">
+						SISTEMA  DE BOTÓN DE PÁNICO
+					</h1>
+					<p class="text-2xl my-6">
+						CitySOS: Tu tranquilidad en tiempo real. Conecta con el sistema de seguridad ciudadana para respuestas rápidas ante cualquier emergencia.
+					</p>
+					<div>
+						<a>
+							<button class="btn btn-primary-fill">Descarga Android</button>
+						</a>
+						<a>
+							<button class="btn btn-primary-fill">Descarga iOS</button>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="flex justify-center items-center">
+				<div class="bg-cover bg-centerp-6 md:p-12 lg:p-16">
+					<img src="/src/assets/Free%20Ui%20View%20Mobile%20App%20Mockup%201.png" alt="CitySOS Demo">
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+</style>
