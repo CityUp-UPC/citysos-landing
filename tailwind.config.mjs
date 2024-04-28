@@ -26,7 +26,8 @@ export default {
 					'50%': { transform: 'translateY(-5%)' },
 					'100%': { transform: 'translateY(0%)' },
 				}
-			}
+			},
+			scrollBehavior: ['smooth'],
 		},
 	},
 	plugins: [

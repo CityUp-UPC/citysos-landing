@@ -2,6 +2,64 @@
 
 ---
 
-<section>
-    A
+<section class="container mx-auto px-2 py-4" id="about">
+    <div class="flex flex-col items-center justify-center">
+        <div class="grid gap-2 text-center justify-center p-4">
+            <h1 class="uppercase text-3xl text-primary font-bold">Sobre nosotros</h1>
+            <p class="text-medium text-xl">Mira el video acerca de CityUP</p>
+        </div>
+        <div class="grid justify-center">
+            <a href="https://github.com/CityUp-UPC" target="_blank">
+                <button
+                        class="group flex gap-2 px-4 py-2 outline outline-2 outline-primary rounded-full hover:text-white hover:bg-primary duration-200 items-center">
+                    <p class="font-medium text-primary group-hover:text-white">Github</p>
+                    <ion-icon name="logo-github" class="text-primary group-hover:text-white"></ion-icon>
+                </button>
+            </a>
+        </div>
+        <iframe class="py-8 w-full h-96 px-8 lg:px-20"
+                src="https://www.youtube.com/embed/RwU7YY6emYc?si=UGjcpZnkYKuuN9ld"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+        </iframe>
+        <ul class="flex flex-wrap justify-center text-center p-4 gap-8 md:gap-16">
+            <a href="#" target="_blank">
+                <li class="flex flex-col justify-center gap-2 items-center hover:scale-95 duration-200">
+                    <img src="https://avatars.githubusercontent.com/u/84975008?v=4" alt="Github Profile Picture" class="w-24 h-24 rounded-full">
+                    <h1 class="text-xl">Liliana Fu Ye</h1>
+                    <p class="text-primary font-medium text-lg">@sayufu</p>
+                </li>
+            </a>
+            <a href="https://github.com/Ramiro-71" target="_blank">
+                <li class="flex flex-col justify-center gap-2 items-center hover:scale-95 duration-200">
+                    <img src="https://avatars.githubusercontent.com/u/113039963?v=4" alt="Github Profile Picture" class="w-24 h-24 rounded-full">
+                    <h1 class="text-xl">Ramiro Villanueva</h1>
+                    <p class="text-primary font-medium text-lg">@Ramiro-71</p>
+                </li>
+            </a>
+            <a href="https://github.com/orgs/CityUp-UPC/people/WilverAR" target="_blank">
+                <li class="flex flex-col justify-center gap-2 items-center hover:scale-95 duration-200">
+                    <img src="https://avatars.githubusercontent.com/u/110883792?v=4" alt="Github Profile Picture" class="w-24 h-24 rounded-full">
+                    <h1 class="text-xl">Wilver Arana</h1>
+                    <p class="text-primary font-medium text-lg">@WilverAR</p>
+                </li>
+            </a>
+            <a href="#" target="_blank">
+                <li class="flex flex-col justify-center gap-2 items-center hover:scale-95 duration-200">
+                    <img src="{{ site.baseurl }}/assets/images/UPC.png" alt="Github Profile Picture" class="w-24 h-24 rounded-full">
+                    <h1 class="text-xl">Marjorie Abanto</h1>
+                    <p class="text-primary font-medium text-lg">@majorie</p>
+                </li>
+            </a>
+            <a href="https://github.com/HiroCardenas" target="_blank">
+                <li class="flex flex-col justify-center gap-2 items-center hover:scale-95 duration-200">
+                    <img src="https://avatars.githubusercontent.com/u/102072107?v=4" alt="Github Profile Picture" class="w-24 h-24 rounded-full">
+                    <h1 class="text-xl">Hiro Cardenas</h1>
+                    <p class="text-primary font-medium text-lg">@HiroCardenas</p>
+                </li>
+            </a>
+        </ul>
+    </div>
 </section>

@@ -20,7 +20,24 @@ import AboutTeam from "../components/AboutTeam.astro";
 			icon.getAttribute('name') === 'menu' ? icon.setAttribute('name', 'close') : icon.setAttribute('name', 'menu');
 		}
 		document.getElementById("onToggleMenuButton").addEventListener("click", onToggleMenu);
+
+		const scrollToTopButton = document.getElementById('scrollToTopButton');
+
+		window.addEventListener('scroll', () => {
+			if (window.pageYOffset > 150) { // Show scrollToTopButton after 100px of scrolling down
+				scrollToTopButton.classList.remove('hidden');
+			} else {
+				scrollToTopButton.classList.add('hidden');
+			}
+		});
+
+		scrollToTopButton.addEventListener('click', () => {
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		});
 	</script>
+	<ion-icon id="scrollToTopButton" name="arrow-up-circle-outline"
+			  class="fixed bottom-4 right-4 text-3xl cursor-pointer hidden p-2 rounded-full bg-accent">
+	</ion-icon>
 	<nav class="bg-white flex justify-around items-center p-4 drop-shadow-lg">
 		<a href="#">
 			<div class="flex gap-2 items-center hover:scale-95 duration-200">
@@ -29,17 +46,17 @@ import AboutTeam from "../components/AboutTeam.astro";
 			</div>
 		</a>
 		<ul class="hidden md:flex items-center gap-8 text-lg">
-			<li><a id="features-nav-link" class="hover:text-secondary hover:cursor-pointer">Características</a></li>
-			<li><a id="citizen-nav-link" class="hover:text-secondary hover:cursor-pointer">Ciudadano</a></li>
-			<li><a id="police-nav-link" class="hover:text-secondary hover:cursor-pointer">Policía</a></li>
-			<li><a id="download-nav-link" class="hover:text-secondary hover:cursor-pointer">Descarga</a></li>
+			<li><a href="#features" class="hover:text-secondary hover:cursor-pointer">Características</a></li>
+			<li><a href="#reviews" class="hover:text-secondary hover:cursor-pointer">Testimonios</a></li>
+			<li><a href="#contact" class="hover:text-secondary hover:cursor-pointer">Contacto</a></li>
+			<li><a href="#about" class="hover:text-secondary hover:cursor-pointer">About</a></li>
 		</ul>
 		<div>
-			<a href="#" target="_blank">
+			<a href="#download">
 				<button
-					class="flex gap-2 px-4 py-2 outline outline-2 outline-primary rounded-full hover:scale-95 duration-200 items-center">
-					<p class="font-medium text-primary">Descarga</p>
-					<ion-icon name="download-outline" class="text-primary"></ion-icon>
+					class="group flex gap-2 px-4 py-2 outline outline-2 outline-primary rounded-full hover:text-white hover:bg-primary duration-200 items-center">
+					<p class="font-medium text-primary group-hover:text-white">Descarga</p>
+					<ion-icon name="download-outline" class="text-primary group-hover:text-white"></ion-icon>
 				</button>
 			</a>
 		</div>
@@ -55,58 +72,58 @@ import AboutTeam from "../components/AboutTeam.astro";
 	<div class="responsive-navbar hidden shadow">
 		<div class="md:hidden justify-center items-center text-center">
 			<ul class="uppercase w-full">
-				<a href="#features-section" id="features-nav-link"><li class="py-6 my-4 hover:box-element-fill">Características</li></a>
-				<a href="#citizen-section" id="citizen-nav-link"><li class="py-6 my-4 hover:box-element-fill">Ciudadano</li></a>
-				<a href="#police-section" id="police-nav-link"><li class="py-6 my-4 hover:box-element-fill">Policía</li></a>
-				<a href="#download-section" id="-download-link"><li class="py-6 my-4 hover:box-element-fill">Descarga</li></a>
+				<a href="#features"><li class="py-6 my-4 hover:box-element-fill">Características</li></a>
+				<a href="#reviews"><li class="py-6 my-4 hover:box-element-fill">Testimonios</li></a>
+				<a href="#contact"><li class="py-6 my-4 hover:box-element-fill">Contacto</li></a>
+				<a href="#about"><li class="py-6 my-4 hover:box-element-fill">About</li></a>
 			</ul>
 		</div>
 	</div>
 	<main class="grid gap-16">
-		<Hero />
+		<Hero id="#top-page" />
 		<AppInfo />
-		<AppFeatures />
-		<AppReviews />
-		<AppDownload />
-		<Contact />
-		<AboutTeam />
-	</main>
-	<footer class="bg-foreground text-white text-center px-4 py-12">
-		<div class="container mx-auto flex flex-col gap-8">
-			<div class="grid md:grid-cols-3 gap-4">
-				<div class="grid text-center md:text-start p-4 gap-4">
-					<div class="flex flex-col gap-4">
-						<h1 class="text-3xl font-bold">CITYSOS</h1>
-						<p class="text-lg">Aplicación integrada de seguridad ciudadana. Desarrollada por estudiantes de Ingeniería de Software en UPC.</p>
+		<AppFeatures id="features" />
+		<AppReviews id="reviews" />
+		<AppDownload id="top" />
+		<Contact id="contact" />
+		<AboutTeam id="about" />
+		<footer class="bg-foreground text-white text-center px-4 py-12">
+			<div class="container mx-auto flex flex-col gap-8">
+				<div class="grid md:grid-cols-3 gap-4">
+					<div class="grid text-center md:text-start p-4 gap-4">
+						<div class="flex flex-col gap-4">
+							<h1 class="text-3xl font-bold">CITYSOS</h1>
+							<p class="text-lg">Aplicación integrada de seguridad ciudadana. Desarrollada por estudiantes de Ingeniería de Software en UPC.</p>
+						</div>
+						<div>
+							<ul class="flex flex-wrap gap-8 justify-center md:justify-start">
+								<li class="hover:scale-95 duration-200"><a href="#https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook" size="large"></ion-icon></a></li>
+								<li class="hover:scale-95 duration-200"><a href="https://www.instagram.com/" target="_blank"><ion-icon name="logo-instagram" size="large"></ion-icon></a></li>
+								<li class="hover:scale-95 duration-200"><a href="https://github.com/CityUp-UPC" target="_blank"><ion-icon name="logo-github" size="large"></ion-icon></a></li>
+								<li class="hover:scale-95 duration-200"><a href="https://discord.gg/Kj9RfBYZcE" target="_blank"><ion-icon name="logo-discord" size="large"></ion-icon></a></li>
+							</ul>
+						</div>
 					</div>
-					<div>
-						<ul class="flex flex-wrap gap-8 justify-center md:justify-start">
-							<li><a href="#" target="_blank"><ion-icon name="logo-facebook" size="large"></ion-icon></a></li>
-							<li><a href="#" target="_blank"><ion-icon name="logo-instagram" size="large"></ion-icon></a></li>
-							<li><a href="https://github.com/CityUp-UPC" target="_blank"><ion-icon name="logo-github" size="large"></ion-icon></a></li>
-							<li><a href="https://discord.gg/Kj9RfBYZcE" target="_blank"><ion-icon name="logo-discord" size="large"></ion-icon></a></li>
+					<div class="grid gap-4 text-center md:text-start p-4 justify-center">
+						<h1 class="text-2xl font-bold">Enlaces</h1>
+						<ul class="grid gap-2 text-lg">
+							<li class="hover:scale-95 duration-200"><a href="#top">Inicio</a></li>
+							<li class="hover:scale-95 duration-200"><a href="#features">Características</a></li>
+							<li class="hover:scale-95 duration-200"><a href="#reviews">Testimonios</a></li>
+							<li class="hover:scale-95 duration-200"><a href="#contact">Contacto</a></li>
+							<li class="hover:scale-95 duration-200"><a href="#download">Descargas</a></li>
+							<li class="hover:scale-95 duration-200"><a href="#about">About</a></li>
 						</ul>
 					</div>
+					<div class="grid p-4 justify-center md:justify-end">
+						<img src="./sos-icon.webp" alt="CitySOS Logo" class="h-32 w-auto mx-auto"/>
+					</div>
 				</div>
-				<div class="grid gap-4 text-center md:text-start p-4 justify-center">
-					<h1 class="text-2xl font-bold">Enlaces</h1>
-					<ul class="grid gap-2 text-lg">
-						<a href="#">Inicio</a>
-						<a href="#">Características</a>
-						<a href="#">Testimonios</a>
-						<a href="#">Contacto</a>
-						<a href="#">Descargas</a>
-						<a href="#">About</a>
-					</ul>
-				</div>
-				<div class="grid p-4 justify-center md:justify-end">
-					<img src="./sos-icon.webp" alt="CitySOS Logo" class="h-32 w-auto mx-auto"/>
-				</div>
+				<hr>
+				<p class="text-lg">© 2024 CitySOS. Todos los derechos reservados.</p>
 			</div>
-			<hr>
-			<p class="text-lg">© 2024 CitySOS. Todos los derechos reservados.</p>
-		</div>
-	</footer>
+		</footer>
+	</main>
 </Layout>
 
 <style>
