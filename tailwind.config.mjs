@@ -10,6 +10,7 @@ export default {
 				'accent': '#FFAF00',
 				'fuchsia': '#A10079',
 				'background': '#F5F5F5',
+				'foreground': '#1E1E1E',
 			},
 			animation: {
 				'bounce-slow': 'bounce-slow ease 3s infinite',
@@ -25,7 +26,8 @@ export default {
 					'50%': { transform: 'translateY(-5%)' },
 					'100%': { transform: 'translateY(0%)' },
 				}
-			}
+			},
+			scrollBehavior: ['smooth'],
 		},
 	},
 	plugins: [

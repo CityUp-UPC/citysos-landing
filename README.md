@@ -1,54 +1,115 @@
-# Astro Starter Kit: Basics
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://citysos.netlify.app/" target="_blank">
+    <img src="https://i.imgur.com/Kha1nxC.png" alt="Logo" width="auto" height="80">
+  </a>
 
-```sh
-npm create astro@latest -- --template basics
-```
+  <h3 align="center">CitySOS Landing Page</h3>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+  <p align="center">
+    <br />
+    <a href="https://citysos.netlify.app/" target="_blank">View Demo</a>
+    ·
+    <a href="https://github.com/CityUp-UPC/citysos-landing/issues" target="_blank">Report Bug</a>
+    ·
+    <a href="https://github.com/CityUp-UPC/citysos-landing/issues" target="_blank">Request Feature</a>
+  </p>
+</div>
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
 
-## 🚀 Project Structure
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-Inside of your Astro project, you'll see the following folders and files:
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+<!-- ABOUT THE PROJECT -->
+## :question:About The Project
+This project was made as an final project for the course IoT Solutions by Software Engineer students at University of Applied Sciences (UPC), Peru 😃
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+<div align="center">
+  <a href="https://github.com/Medtech-Innovations/medmeet-landing" target="_blank">
+    <img src="https://i.imgur.com/yqywClK.png" alt="Preview Landing" style="max-width: 100%; height: auto;">
+  </a>
+</div>
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Built With
+[![Built with Astro](https://astro.badg.es/v2/built-with-astro/small.svg)](https://astro.build)
+[![Tailwind][tailwind-shield]][tailwind-url]
 
-## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+<!-- GETTING STARTED -->
+## :wrench:Getting Started
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Installation
 
-## 👀 Want to learn more?
+1. Clone the repo
+   ```sh
+   git clone https://github.com/CityUp-UPC/citysos-landing.gitg
+   ```
+2. Install NPM packages in the cloned file
+   ```sh
+   npm install
+   ```
+3. Run the following command
+   ```sh
+   npm run dev
+   ```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+
+<!-- CONTRIBUTING -->
+## :bulb:Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+
+<!-- LICENSE -->
+## :scroll:License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+
+
+<!-- CONTACT -->
+## :email:Contact
+
+[CityUP](https://github.com/CityUp-UPC)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[tailwind-url]: https://tailwindcss.com/
+[tailwind-shield]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
