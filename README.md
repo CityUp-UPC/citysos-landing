@@ -49,7 +49,7 @@ This project was made as an final project for the course IoT Solutions by Softwa
 
 <div align="center">
   <a href="https://github.com/Medtech-Innovations/medmeet-landing" target="_blank">
-    <img src="https://i.imgur.com/yqywClK.png" alt="Preview Landing" width="auto" height="500">
+    <img src="https://i.imgur.com/yqywClK.png" alt="Preview Landing" height="500">
   </a>
 </div>
 
