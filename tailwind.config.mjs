@@ -9,6 +9,7 @@ export default {
 				'tertiary': '#E65C00',
 				'accent': '#FFAF00',
 				'fuchsia': '#A10079',
+				'background': '#F5F5F5',
 			},
 			animation: {
 				'bounce-slow': 'bounce-slow ease 3s infinite',
@@ -40,6 +41,7 @@ export default {
 				}
 			}
 			addUtilities(newUtilities)
-		}
+		},
+		require('flowbite/plugin'),
 	],
 }

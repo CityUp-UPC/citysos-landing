@@ -1,6 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from "../components/Hero.astro";
+import AppInfo from "../components/AppInfo.astro";
+import AppFeatures from "../components/AppFeatures.astro";
+import AppReviews from "../components/AppReviews.astro";
 ---
 
 <Layout title="CitySOS">
@@ -55,8 +58,11 @@ import Hero from "../components/Hero.astro";
 			</ul>
 		</div>
 	</div>
-	<main class="container mx-auto">
+	<main class="grid gap-16">
 		<Hero />
+		<AppInfo />
+		<AppFeatures />
+		<AppReviews />
 
 
 	</main>
